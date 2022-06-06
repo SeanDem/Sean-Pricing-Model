@@ -1,0 +1,22 @@
+{
+    "name": "seandem-opensea-pricing-tool",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+    },
+    
+    "author": "sean-demeritt",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.26.0",
+        "cheerio": "latest",
+        "ethers": "^5.5.2",
+        "HDWalletProvider": "@truffle/hdwallet-provider: ^2.0.0",
+        "make-fetch-happen": "^10.1.1",
+        "opensea-js": "^3.0.0",
+        "readline": "^1.3.0",
+        "request": "latest"
+    }
+}
