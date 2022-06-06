@@ -191,6 +191,7 @@ async function updateTraitListingFloor(listingPriceEth, assetTraits){
     //[n].value
     //listingPriceEth
     
+    //TODO fix this! 
     for (let n = 0; n < Object.keys(assetTraits).length; n++){
         let type = assetTraits[n].trait_type
         let value = assetTraits[n].value 
