@@ -32,13 +32,11 @@ const debug = true
 const config = {
     net : Network.Main,
     pause: 5000,
-    apiKey : "73390599da6243559194a3da413a31ce",
-    httpsRpc : "https://mainnet.infura.io/v3/4cdbf9ce83b54525b32285f327836b53",
-    privateKey : "5e388dce9a9531076405874cb677fba464c63567d9e7ba663dec64a77df511b6",
+    apiKey : "",
+    httpProvider : "https://mainnet.infura.io/v3/4cdbf9ce83b54525b32285f327836b53",
     WETH: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
     ETH : "0x0000000000000000000000000000000000000000",
     slug : "boredapeyachtclub", 
-    duration : 2000,
     start : 1
 }
 
@@ -53,9 +51,10 @@ function subtractDays(numOfDays, date = new Date()) {
     return date;
     }
 
-const provider = new HDWalletProvider([config.privateKey], config.httpsRpc);
+const web3Provider = new Web3.providers.HttpProvider(httpProvider);
+const web3 = new Web3(web3Provider);
 
-const seaport = new OpenSeaPort(provider, {
+const seaport = new OpenSeaPort(web3, {
     networkName: config.net,
     apiKey: config.apiKey
   })
